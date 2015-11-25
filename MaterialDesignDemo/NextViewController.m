@@ -17,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    CALayer *layer = self.button.layer;
+    layer.shadowOffset = CGSizeMake(0, 5);
+    layer.shadowRadius = 5.0;
+    layer.shadowOpacity = 0.5;
+    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.masksToBounds = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
